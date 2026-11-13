@@ -1,5 +1,5 @@
 %{
-#include "semantico.tab.h"
+#include "sintatico.tab.h"
 #include <stdio.h>
 #include <string.h>
 

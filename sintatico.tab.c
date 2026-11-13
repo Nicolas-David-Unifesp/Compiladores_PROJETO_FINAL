@@ -67,7 +67,7 @@
 
 
 /* First part of user prologue.  */
-#line 1 "semantico.y"
+#line 1 "sintatico.y"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -80,7 +80,7 @@ extern int yylineno; /* Caso precise reportar linhas em erros sintáticos */
 extern char lexema_atual[];
 int erros_sintaticos = 0;
 
-#line 84 "semantico.tab.c"
+#line 84 "sintatico.tab.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -103,7 +103,7 @@ int erros_sintaticos = 0;
 #  endif
 # endif
 
-#include "semantico.tab.h"
+#include "sintatico.tab.h"
 /* Symbol kind.  */
 enum yysymbol_kind_t
 {
@@ -1417,25 +1417,25 @@ yyreduce:
   switch (yyn)
     {
   case 5: /* declaracao_lista: declaracao_lista error "';'"  */
-#line 34 "semantico.y"
+#line 34 "sintatico.y"
                                               { yyerrok; }
-#line 1423 "semantico.tab.c"
+#line 1423 "sintatico.tab.c"
     break;
 
   case 22: /* local_declaracoes: local_declaracoes tipo_especificador error "';'"  */
-#line 78 "semantico.y"
+#line 78 "sintatico.y"
                                                                    { yyerrok; }
-#line 1429 "semantico.tab.c"
+#line 1429 "sintatico.tab.c"
     break;
 
   case 30: /* statement: error "';'"  */
-#line 92 "semantico.y"
+#line 92 "sintatico.y"
                       { yyerrok; }
-#line 1435 "semantico.tab.c"
+#line 1435 "sintatico.tab.c"
     break;
 
 
-#line 1439 "semantico.tab.c"
+#line 1439 "sintatico.tab.c"
 
       default: break;
     }
@@ -1659,7 +1659,7 @@ yyreturnlab:
   return yyresult;
 }
 
-#line 179 "semantico.y"
+#line 179 "sintatico.y"
 
 
 /* Função obrigatória para tratamento de erros sintáticos */
