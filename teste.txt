@@ -1,7 +1,75 @@
-int main(void) {
-    int x;
-    x @ = 1;
-    x # = 2;
-    x = ;
-    return 0;
+/* Um programa para ordenação por seleção de
+   uma matriz com dez elementos. */
+
+int x[10];
+int entrada;
+
+/* Entrada simulada: gera os valores de 9 a 0. */
+int input(void)
+{
+    entrada = entrada - 1;
+    return entrada;
+}
+
+/* Saida simulada: C- nao possui operacao de impressao nesta implementacao. */
+void output(int valor)
+{
+    return;
+}
+
+int minloc(int a[], int low, int high)
+{
+    int i; int x; int k;
+    k = low;
+    x = a[low];
+    i = low + 1;
+
+    while (i < high)
+    {
+        if (a[i] < x)
+        {
+            x = a[i];
+            k = i;
+        }
+        i = i + 1;
+    }
+    return k;
+}
+
+void sort(int a[], int low, int high)
+{
+    int i; int k;
+    i = low;
+
+    while (i < high-1)
+    {
+        int t;
+        k = minloc(a, i, high);
+        t = a[k];
+        a[k] = a[i];
+        a[i] = t;
+        i = i + 1;
+    }
+}
+
+void main(void)
+{
+    int i;
+    entrada = 10;
+    i = 0;
+
+    while (i < 10)
+    {
+        x[i] = input();
+        i = i + 1;
+    }
+
+    sort(x, 0, 10);
+    i = 0;
+
+    while (i < 10)
+    {
+        output(x[i]);
+        i = i + 1;
+    }
 }
